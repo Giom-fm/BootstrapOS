@@ -1,0 +1,57 @@
+- name: Install packages
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tags: never
+  roles:
+    - packages
+ 
+- name: Sync nextcloud data
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tags: [never, nextcloud]    
+  roles:
+    - nextcloud
+
+- name: Configure userland
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tags: [never, userland]
+  tasks:
+    - name: change user shell to fish
+      become: true
+      user:
+        name: giom
+        shell: /usr/bin/fish
+
+#    - name: install omf
+#      ansible.builtin.shell:
+#        cmd: "curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish"
+
+    - name: Copy i3 config
+      ansible.builtin.copy:
+        src: ~/Dokumente/config/i3/
+        dest: ~/.config/i3
+
+    - name: Copy rofi config
+      ansible.builtin.copy:
+        src: ~/Dokumente/config/dotfiles/rofi/
+        dest: ~/.config/rofi
+
+    - name: Copy omf config
+      ansible.builtin.copy:
+        src: ~/Dokumente/config/dotfiles/omf/init.fish
+        dest: ~/.config/omf/
+
+    - name: Copy alacritty config
+      ansible.builtin.copy:
+        src: ~/Dokumente/config/dotfiles/alacritty/alacritty.yml
+        dest: ~/.config/alacritty/
+
+
+      
+      
+    
+  

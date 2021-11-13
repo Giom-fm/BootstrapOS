@@ -1,0 +1,26 @@
+- name: Backup sources.list
+  become: true
+  ansible.builtin.command:
+    cmd: mv /etc/apt/sources.list /etc/apt/sources.list.bak
+    removes: /etc/apt/sources.list
+
+#- name: Copy testing.list
+#  become: true
+#  tags: never
+#  ansible.builtin.copy:
+#    src: testing.list
+#    dest: /etc/apt/sources.list.d/
+  
+- name: Copy sid.list
+  become: true
+  ansible.builtin.copy:
+    src: sid.list
+    dest: /etc/apt/sources.list.d/
+
+#- name: Copy apt preferences
+#  become: true
+#  tags: never
+#  ansible.builtin.copy:
+#    src: testing-sid
+#    dest: /etc/apt/preferences.d/
+  

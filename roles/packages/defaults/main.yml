@@ -1,0 +1,96 @@
+base_packages:
+  # Desktop environment
+  - lightdm
+  - i3
+  - light-locker
+  - polybar
+  - plymouth
+  - rofi
+  - redshift
+  - light
+  - network-manager-gnome
+
+  # File Manager
+#  - ranger
+
+  # Virtualization
+  - virt-manager
+  - qemu
+  - ovmf
+  - bridge-utils
+
+  # Audio
+  - pulseaudio
+#  - pamixer
+  - pavucontrol
+
+  # Office
+  - libreoffice
+  - texlive
+  - thunderbird
+ # - lightning
+
+  # Programming
+  - build-essential
+  - git
+  - rustc
+  - cargo
+  - octave
+  - wireshark
+
+  # System Utils
+  - network-manager
+  - firewalld
+  - fail2ban
+  - software-properties-common
+  - arandr
+
+  # Bluetooth
+  - blueman
+  - pulseaudio-module-bluetooth
+  # Terminal & Shell
+  - fish
+  - tmux
+
+  # Browser
+  - firefox
+  - chromium
+
+  # Utils
+  - telegram-desktop
+  - nextcloud-desktop
+  - nextcloud-desktop-cmd
+  - keepassxc
+  - vlc
+  - filezilla
+  - vim
+  - feh
+  - speedcrunch
+  - cups
+  - ranger
+  - ncdu
+  - lshw
+  - flameshot
+  - htop
+  - rsync
+
+
+sid_packages:
+
+mpr_packages:
+  - code-bin
+
+  # Terminal
+  - alacritty
+
+
+third_party:
+  - {package: code, key: https://packages.microsoft.com/keys/microsoft.asc, repo: "deb [signed-by=/usr/share/keyrings/code.gpg arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main"}
+  - {package: makedeb, key: https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub, repo: "deb [signed-by=/usr/share/keyrings/makedeb.gpg arch=all] https://proget.hunterwittenborn.com/ makedeb main"}
+
+
+ppa_repositories:
+  - ppa:mmstick76/alacritty
+
+ppa_packages:
+  -  alacritty

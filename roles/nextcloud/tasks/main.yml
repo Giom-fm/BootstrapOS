@@ -1,0 +1,26 @@
+- ansible.builtin.pause:
+    prompt: "Nextcloud username"
+  register: nc_user
+
+- ansible.builtin.pause:
+    prompt: "Nextcloud password"
+    echo: no
+  register: nc_password
+
+- ansible.builtin.pause:
+    prompt: "Nextcloud url"
+  register: nc_url
+
+- ansible.builtin.pause:
+    prompt: "Nextcloud folder"
+  register: nc_folder
+
+
+- name: Creates directory | {{ nc_folder.user_input }}
+  file:
+    path: "{{ nc_folder.user_input }}"
+    state: directory
+
+- name: Sync {{ nc_user }}'s data from {{ nc_url.user_input }} to {{ nc_folder.user_input }}
+  ansible.builtin.command:
+    cmd: /usr/bin/nextcloudcmd --non-interactive -u {{ nc_user.user_input }} -p {{ nc_password.user_input }} {{ nc_folder.user_input }} {{ nc_url.user_input }}

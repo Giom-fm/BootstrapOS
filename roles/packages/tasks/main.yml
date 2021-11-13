@@ -1,0 +1,23 @@
+- name: Configure APT
+  tags: [never, packages_configure]
+  include_tasks: apt.yml
+
+- name: Install base packages
+  tags: [never, packages_install]
+  include_tasks:
+    file: packages.yml
+    apply:
+      tags: packages_install
+
+- name: Install 3dparty packages
+  tags: [never, packages_3dparty]
+  include_tasks: 3dparty.yml
+
+- name: Install tap
+  tags: [never, packages_tap]
+  include_tasks: tap.yml
+
+- name: Install PPA packages
+  tags: [never, packages_ppa]
+  include_tasks: ppa.yml
+

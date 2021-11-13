@@ -1,0 +1,9 @@
+- name: Get tap repository
+  ansible.builtin.git:
+    repo: https://mpr.hunterwittenborn.com/tap.git
+    dest: ~/repos/private/tap
+
+- name: Build and install tap using makedeb
+  ansible.builtin.command:
+    cmd: makedeb -si
+    chdir: ~/repos/private/tap
