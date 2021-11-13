@@ -1,0 +1,48 @@
+- name: Backup data
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+
+    - name: Create backup folder
+      tags: always
+      ansible.builtin.file:
+        path: "{{ playbook_dir }}/backup/"
+        state: directory
+
+    - name: Backup WLAN-keys
+      tags: [never, wlan]
+      become: true
+      ansible.posix.synchronize:
+        src: /etc/NetworkManager/system-connections/
+        dest: "{{ playbook_dir }}/backup/wlan"
+        archive: true
+
+    - name: Backup SSH keys and config
+      tags: [never, ssh]
+      ansible.posix.synchronize:
+        src: ~/.ssh/
+        dest: "{{ playbook_dir }}/backup/ssh/"
+        archive: true
+
+    - name: Backup repos
+      tags: [never, repos]
+      become: true
+      ansible.posix.synchronize:
+        src: ~/repos/
+        dest: "{{ playbook_dir }}/backup/repos/"
+        archive: true
+
+    - name: Get Nextcloud folder
+      tags: [never, sync]
+      ansible.builtin.pause:
+        prompt: "Nextcloud folder"
+      register: nc_folder
+
+    - name: Copy backup to {{ nc_folder.user_input }}
+      tags: [never, sync]
+      become: true
+      ansible.posix.synchronize:
+        src: "{{ playbook_dir }}/backup/"
+        dest: "{{ nc_folder.user_input }}/backup/"
+        archive: true
