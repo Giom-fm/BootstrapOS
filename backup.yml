@@ -33,20 +33,13 @@
         src: ~/repos/
         dest: "{{ playbook_dir }}/backup/repos/"
         archive: true
+        owner:
         delete: true
+        rsync_opts: ["--exclude=*{{ playbook_dir }}/backup*"]
 
-
-    - name: Get Nextcloud folder
-      tags: [never, sync]
-      ansible.builtin.pause:
-        prompt: "Nextcloud folder"
-      register: nc_folder
-
-    - name: Copy backup to {{ nc_folder.user_input }}
-      tags: [never, sync]
+    - name: Compress backup into backup.tgz
+      tags: [never, archive]
       become: true
-      ansible.posix.synchronize:
-        src: "{{ playbook_dir }}/backup/"
-        dest: "{{ nc_folder.user_input }}/backup/"
-        archive: true
-        delete: true
+      community.general.archive:
+        path: "{{ playbook_dir }}/backup/"
+        dest: "{{ playbook_dir }}/backup.tgz"
