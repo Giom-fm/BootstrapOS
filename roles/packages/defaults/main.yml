@@ -73,9 +73,8 @@ base_packages:
   - flameshot
   - htop
   - rsync
+  - curl
 
-
-sid_packages:
 
 mpr_packages:
   - code-bin
@@ -86,7 +85,9 @@ mpr_packages:
 
 third_party:
   - {package: code, key: https://packages.microsoft.com/keys/microsoft.asc, repo: "deb [signed-by=/usr/share/keyrings/code.gpg arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main"}
+  - {package: teams, key: https://packages.microsoft.com/keys/microsoft.asc, repo: "deb [signed-by=/usr/share/keyrings/teams.gpg arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main"}
   - {package: makedeb, key: https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub, repo: "deb [signed-by=/usr/share/keyrings/makedeb.gpg arch=all] https://proget.hunterwittenborn.com/ makedeb main"}
+  - {package: element-desktop, key: https://packages.riot.im/debian/element-io-archive-keyring.asc, repo: "deb [signed-by=/usr/share/keyrings/element-desktop.gpg] https://packages.riot.im/debian/ default main"}
 
 
 ppa_repositories:
