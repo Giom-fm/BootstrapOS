@@ -39,15 +39,22 @@
         src: ~/Dokumente/config/dotfiles/rofi/
         dest: ~/.config/rofi
 
-    - name: Copy omf config
-      ansible.builtin.copy:
-        src: ~/Dokumente/config/dotfiles/omf/init.fish
-        dest: ~/.config/omf/
-
     - name: Copy alacritty config
       ansible.builtin.copy:
         src: ~/Dokumente/config/dotfiles/alacritty/alacritty.yml
         dest: ~/.config/alacritty/
+
+    #- name: Install omf
+    #  ansible.builtin.shell:
+    #    cmd: curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+
+    - name: Copy omf config
+      ansible.builtin.copy:
+        src: ~/Dokumente/config/dotfiles/omf/init.fish
+        dest: ~/.config/omf/
+      
+
+      
 
 
       

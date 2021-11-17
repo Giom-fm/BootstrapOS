@@ -21,7 +21,10 @@
 
 - name: Install tap
   tags: [never, packages_tap]
-  include_tasks: tap.yml
+  include_tasks:
+    file: tap.yml
+    apply:
+      tags: packages_tap 
 
 - name: Install PPA packages
   tags: [never, packages_ppa]
