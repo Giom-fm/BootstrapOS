@@ -37,6 +37,8 @@ base_packages:
   - cargo
   - octave
   - wireshark
+  - golang
+  - nmap
 
   # System Utils
   - network-manager
@@ -48,6 +50,7 @@ base_packages:
   # Bluetooth
   - blueman
   - pulseaudio-module-bluetooth
+  
   # Terminal & Shell
   - fish
   - tmux
@@ -75,7 +78,6 @@ base_packages:
   - rsync
   - curl
   - hcloud-cli
-  - nmap
 
 
 mpr_packages:
