@@ -28,7 +28,9 @@ base_packages:
   - libreoffice
   - texlive
   - latexmk
+  - texlive-xetex
   - thunderbird
+  - texlive-lang-german
  # - lightning
 
   # Programming
