@@ -105,7 +105,5 @@ third_party:
   - {package: spotify-client, key: https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg, repo: "deb [signed-by=/usr/share/keyrings/spotify-client.gpg] http://repository.spotify.com stable non-free"}
 
 ppa_repositories:
-  - ppa:mmstick76/alacritty
 
 ppa_packages:
-  -  alacritty
