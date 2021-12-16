@@ -10,11 +10,3 @@
   ansible.builtin.apt:
     pkg: "{{ base_packages }}"
     state: present
-
-- name: Install base packages (sid)
-  become: true
-  tags: never
-  ansible.builtin.apt:
-    pkg: "{{ sid_packages }}"
-    default_release: sid
-    state: present
