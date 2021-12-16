@@ -9,6 +9,9 @@ base_packages:
   - redshift
   - light
   - network-manager-gnome
+  - picom
+  - plymouth
+  - plymouth-themes
 
   # File Manager
 #  - ranger
@@ -31,6 +34,10 @@ base_packages:
   - texlive-xetex
   - thunderbird
   - texlive-lang-german
+  - system-config-printer
+  - printer-driver-all
+  - hplip
+  - cups
  # - lightning
 
   # Programming
@@ -72,7 +79,6 @@ base_packages:
   - vim
   - feh
   - speedcrunch
-  - cups
   - ranger
   - ncdu
   - lshw
@@ -80,13 +86,12 @@ base_packages:
   - htop
   - rsync
   - curl
-  - hcloud-cli
 
 
 mpr_packages:
   - code-bin
-
-  # Terminal
+  - hcloud
+  - ligthdm-mini-greeter
   - alacritty
 
 
@@ -97,12 +102,7 @@ third_party:
   - {package: element-desktop, key: https://packages.riot.im/debian/element-io-archive-keyring.asc, repo: "deb [signed-by=/usr/share/keyrings/element-desktop.gpg] https://packages.riot.im/debian/ default main"}
   - {package: kubectl, key: https://packages.cloud.google.com/apt/doc/apt-key.gpg, repo: "deb [signed-by=/usr/share/keyrings/kubectl.gpg] https://apt.kubernetes.io/ kubernetes-xenial main"}
   - {package: terraform, key: https://apt.releases.hashicorp.com/gpg, repo: "deb [signed-by=/usr/share/keyrings/terraform.gpg arch=amd64] https://apt.releases.hashicorp.com buster main"}
-  - {package: spotify-client, key: https://download.spotify.com/debian/pubkey_0D811D58.gpg, repo: "deb [signed-by=/usr/share/keyrings/spotify-client.gpg] http://repository.spotify.com stable non-free"}
-
-
-
-  
-
+  - {package: spotify-client, key: https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg, repo: "deb [signed-by=/usr/share/keyrings/spotify-client.gpg] http://repository.spotify.com stable non-free"}
 
 ppa_repositories:
   - ppa:mmstick76/alacritty
