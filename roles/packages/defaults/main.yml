@@ -87,6 +87,7 @@ base_packages:
   - rsync
   - curl
   - apt-rdepends
+  - apt-files
 
 
 mpr_packages:
