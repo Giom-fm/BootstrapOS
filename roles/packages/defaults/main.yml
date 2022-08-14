@@ -1,10 +1,11 @@
 base_packages:
   # Desktop environment
   - lightdm
-  - i3
+  - xserver-xorg-xore
+  - intel-media-va-driver-non-free
+  - xserver-xorg-video-intel
+#  - i3
   - light-locker
-  - polybar
-  - plymouth
   - rofi
   - redshift
   - light
@@ -13,9 +14,15 @@ base_packages:
   - plymouth
   - plymouth-themes
   - network-manager-l2tp-gnome
+  - playerctl
+  # Window Manager
+  - python3-psutil
+  - python3-xcffib
+  - python3-cairocffi
+
 
   # File Manager
-#  - ranger
+  - ranger
 
   # Virtualization
   - virt-manager
@@ -29,7 +36,7 @@ base_packages:
   - pavucontrol
 
   # Office
-  - libreoffice
+  - libreoffice-gtk3
   - texlive
   - latexmk
   - texlive-xetex
@@ -52,11 +59,11 @@ base_packages:
   - nmap
 
   # System Utils
-  - network-manager
   - firewalld
   - fail2ban
   - software-properties-common
   - arandr
+  - inxi
 
   # Bluetooth
   - blueman
@@ -87,7 +94,8 @@ base_packages:
   - rsync
   - curl
   - apt-rdepends
-  - apt-files
+  - apt-file
+  - apt-listbugs
 
 
 mpr_packages:
@@ -102,11 +110,13 @@ mpr_packages:
 
 
 third_party:
-  - {package: code, key: https://packages.microsoft.com/keys/microsoft.asc, repo: "deb [signed-by=/usr/share/keyrings/code.gpg arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main"}
+#  - {package: code, key: https://packages.microsoft.com/keys/microsoft.asc, repo: "deb [signed-by=/usr/share/keyrings/code.gpg arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main"}
+  - {package: codium, key: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg, repo: "deb [signed-by=/usr/share/keyrings/codium.gpg] https://download.vscodium.com/debs vscodium main"}
   - {package: teams, key: https://packages.microsoft.com/keys/microsoft.asc, repo: "deb [signed-by=/usr/share/keyrings/teams.gpg arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main"}
   - {package: makedeb, key: https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub, repo: "deb [signed-by=/usr/share/keyrings/makedeb.gpg arch=all] https://proget.hunterwittenborn.com/ makedeb main"}
   - {package: element-desktop, key: https://packages.riot.im/debian/element-io-archive-keyring.asc, repo: "deb [signed-by=/usr/share/keyrings/element-desktop.gpg] https://packages.riot.im/debian/ default main"}
-  - {package: terraform, key: https://apt.releases.hashicorp.com/gpg, repo: "deb [signed-by=/usr/share/keyrings/terraform.gpg arch=amd64] https://apt.releases.hashicorp.com buster main"}
+#  - {package: terraform, key: https://apt.releases.hashicorp.com/gpg, repo: "deb [signed-by=/usr/share/keyrings/terraform.gpg arch=amd64] https://apt.releases.hashicorp.com buster main"}
+
 
 ppa_repositories:
 
