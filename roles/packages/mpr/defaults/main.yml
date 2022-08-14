@@ -1,9 +1,9 @@
 mpr_packages:
-  - code-bin
-  - hcloud
-  - ligthdm-mini-greeter
+#  - code-bin
+#  - hcloud
+#  - ligthdm-mini-greeter
   - alacritty
   - btop
   - spotblock-git
   - spotify
-  - kubectl-bin
+#  - kubectl-bin

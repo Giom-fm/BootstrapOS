@@ -1,0 +1,1 @@
+ansible-playbook bootstrap.yml --tags packages --ask-become-pass

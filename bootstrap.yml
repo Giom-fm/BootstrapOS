@@ -14,6 +14,7 @@
     - packages/virtualisation
     - packages/office
     - packages/3dparty
+#    - packages/mpr
  
 - name: Sync nextcloud data
   hosts: localhost
@@ -34,46 +35,19 @@
       user:
         name: giom
         shell: /usr/bin/fish
+    - name: Install omf
+      ansible.builtin.shell:
+        cmd: curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
-    #- name: Copy i3 config
-    #  ansible.builtin.copy:
-    #    src: ~/Dokumente/config/i3/
-    #    dest: ~/.config/i3
 
-        #    - name: Copy rofi configs
-        #ansible.builtin.copy:
-        #src: ~/Dokumente/config/dotfiles/rofi/
-        #dest: ~/.config/rofi
 
-        #    - name: Copy QTile configs
-        #ansible.builtin.copy:
-        #src: ~/Dokumente/config/dotfiles/qtile/
-        #dest: ~/.config/qtile
 
-    - name: Copy alacritty config
-      ansible.builtin.copy:
-        src: ~/Dokumente/config/dotfiles/alacritty/alacritty.yml
-        dest: ~/.config/alacritty/
-
-    - name: Copy omf config
-      ansible.builtin.copy:
-        src: ~/Dokumente/config/dotfiles/omf/init.fish
-        dest: ~/.config/omf/
-
-    - name: Copy ranger rifle config
-      ansible.builtin.copy:
-        src: ~/Dokumente/config/dotfiles/ranger/rifle.conf
-        dest: ~/.config/ranger/
-
-    
+        
         #    - name: Copy Desktop entry configs
         #ansible.builtin.copy:
         #src: ~/Dokumente/config/dotfiles/desktop/
         #dest: ~/.local/share/applications
 
-    #- name: Install omf
-    #  ansible.builtin.shell:
-    #    cmd: curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
 
 
