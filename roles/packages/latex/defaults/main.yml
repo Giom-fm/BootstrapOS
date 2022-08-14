@@ -1,0 +1,5 @@
+latex_packages:
+  - texlive
+  - latexmk
+  - texlive-xetex
+  - texlive-lang-german

@@ -1,0 +1,7 @@
+- name: Upgrade system
+  become: true
+  tags: [never, ugrade]
+  ansible.builtin.apt:
+    update_cache: yes
+    upgrade: dist
+    autoremove: yes

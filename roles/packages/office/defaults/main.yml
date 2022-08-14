@@ -1,0 +1,5 @@
+virtualisation_packages:
+  - virt-manager
+  - qemu-system-x86
+  - ovmf
+  - bridge-utils

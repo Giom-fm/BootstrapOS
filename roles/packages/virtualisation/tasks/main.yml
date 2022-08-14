@@ -1,0 +1,5 @@
+- name: Install virtualisation packages
+  become: true
+  ansible.builtin.apt:
+    pkg: "{{ virtualisation_packages }}"
+    state: present

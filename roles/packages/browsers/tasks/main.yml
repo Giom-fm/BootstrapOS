@@ -1,0 +1,5 @@
+- name: Install browses
+  become: true
+  ansible.builtin.apt:
+    pkg: "{{ browsers_packages }}"
+    state: present

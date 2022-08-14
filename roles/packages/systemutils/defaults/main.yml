@@ -1,0 +1,16 @@
+systemutils_packages:
+  - firewalld
+  - fail2ban
+  - software-properties-common
+  #- arandr
+  - inxi
+  - plymouth
+  - plymouth-themes
+  - network-manager-l2tp-gnome
+  - playerctl
+  - pulseaudio
+#  - pamixer
+  - pavucontrol
+  - intel-media-va-driver-non-free
+  - light
+

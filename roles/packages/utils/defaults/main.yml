@@ -1,0 +1,22 @@
+utils_packages:
+  - telegram-desktop
+  - nextcloud-desktop
+  - nextcloud-desktop-cmd
+  - keepassxc
+  - vlc
+  - filezilla
+  - vim
+  - feh
+  - speedcrunch
+  - ncdu
+  - lshw
+  - flameshot
+  - rsync
+  - curl
+  - apt-rdepends
+  - apt-file
+  - apt-listbugs
+  - ranger
+  - fish
+  - tmux
+

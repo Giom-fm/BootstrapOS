@@ -1,0 +1,10 @@
+programming_packages:
+  - build-essential
+  - git
+  - nmap
+  - wireshark
+  #- rustc
+  #- cargo
+  #- octave
+  #- golang
+
