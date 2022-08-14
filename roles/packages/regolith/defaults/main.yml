@@ -1,0 +1,9 @@
+regolith_packages:
+  - regolith-destkop
+  - regolith-lightdm-config
+  - i3xrocks-focused-window-name
+  - i3xrocks-rofication
+  - i3xrocks-info
+  - i3xrocks-app-launcher
+  - i3xrocks-memory
+  - i3xrocks-battery

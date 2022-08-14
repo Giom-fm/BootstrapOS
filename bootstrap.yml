@@ -13,6 +13,7 @@
     - packages/programming
     - packages/virtualisation
     - packages/office
+    - packages/3dparty
  
 - name: Sync nextcloud data
   hosts: localhost

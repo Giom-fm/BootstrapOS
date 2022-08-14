@@ -1,0 +1,5 @@
+- name: Install regolith packages
+  become: true
+  ansible.builtin.apt:
+    pkg: "{{ regolith_packages }}"
+    state: present
