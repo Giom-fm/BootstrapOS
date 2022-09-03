@@ -1,6 +1,7 @@
 
 third_party:
  - {package: code, key: https://packages.microsoft.com/keys/microsoft.asc, repo: "deb [signed-by=/usr/share/keyrings/code.gpg arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main"}
+ - {package: google-chrome-stable, key: https://dl.google.com/linux/linux_signing_key.pub, repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-stable.gpg] http://dl.google.com/linux/chrome/deb/ stable main"}
 # - {package: codium, key: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg, repo: "deb [signed-by=/usr/share/keyrings/codium.gpg] https://download.vscodium.com/debs vscodium main"}
 # - {package: teams, key: https://packages.microsoft.com/keys/microsoft.asc, repo: "deb [signed-by=/usr/share/keyrings/teams.gpg arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main"}
  - {package: makedeb, key: https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub, repo: "deb [signed-by=/usr/share/keyrings/makedeb.gpg arch=all] https://proget.hunterwittenborn.com/ makedeb main"}

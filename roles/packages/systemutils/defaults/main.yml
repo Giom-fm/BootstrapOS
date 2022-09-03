@@ -12,5 +12,5 @@ systemutils_packages:
 #  - pamixer
   - pavucontrol
   - intel-media-va-driver-non-free
-  - light
+  - kitty
 

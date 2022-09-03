@@ -29,18 +29,11 @@
   connection: local
   gather_facts: false
   tags: [never, dotfiles]
-  tasks:
-    - name: change user shell to fish
-      become: true
-      user:
-        name: giom
-        shell: /usr/bin/fish
-    - name: Install omf
-      ansible.builtin.shell:
-        cmd: curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-
-
-
+  roles:
+  #  - shell
+    - dotfiles/omf
+    - dotfiles/ranger
+ 
 
         
         #    - name: Copy Desktop entry configs
