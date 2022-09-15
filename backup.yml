@@ -37,6 +37,17 @@
         delete: true
         rsync_opts: ["--exclude=*{{ playbook_dir }}/backup*"]
 
+    - name: Backup bashrc
+      tags: [never, repos]
+      become: true
+      ansible.posix.synchronize:
+        src: ~/.bashrc
+        dest: "{{ playbook_dir }}/backup/"
+        archive: true
+        owner:
+        delete: true
+        rsync_opts: ["--exclude=*{{ playbook_dir }}/backup*"]
+
     - name: Compress backup into backup.tgz
       tags: [never, archive]
       become: true
