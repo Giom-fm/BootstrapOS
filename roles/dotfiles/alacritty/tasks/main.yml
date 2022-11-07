@@ -1,4 +1,0 @@
-- name: Copy alacritty config
-  ansible.builtin.copy:
-    src: ~/Dokumente/config/dotfiles/alacritty/alacritty.yml
-    dest: ~/.config/alacritty/
