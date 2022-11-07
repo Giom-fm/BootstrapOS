@@ -1,0 +1,14 @@
+- name: Configure dotfiles
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - dotfiles/ranger
+    - dotfiles/zellij
+    - dotfiles/regolith2
+#    - dotfiles/bashrc
+
+      
+      
+    
+  

@@ -1,0 +1,4 @@
+- name: Copy zellij configs
+  ansible.builtin.copy:
+    src: ~/Dokumente/config/dotfiles/zellij/
+    dest: ~/.config/zellij/

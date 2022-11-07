@@ -1,0 +1,17 @@
+- name: Sync nextcloud data
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tags: [never, nextcloud]    
+  roles:
+    - nextcloud
+
+
+
+      
+
+
+      
+      
+    
+  

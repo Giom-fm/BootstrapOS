@@ -1,0 +1,24 @@
+- name: Install packages
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - sid
+    - packages/upgrade
+    - packages/office
+    - packages/browsers
+    - packages/utils
+    - packages/systemutils
+    - packages/programming
+    - packages/virtualisation
+    - packages/office
+    - packages/3dparty
+    - packages/shell 
+
+      
+
+
+      
+      
+    
+  

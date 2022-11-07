@@ -1,0 +1,4 @@
+- name: Copy regolith2 configs
+  ansible.builtin.copy:
+    src: ~/Dokumente/config/dotfiles/regolith2/
+    dest: ~/.config/regolith2
