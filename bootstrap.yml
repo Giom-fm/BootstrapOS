@@ -32,6 +32,7 @@
   roles:
     - shell
     - dotfiles/ranger
+    - dotfiles/bashrc
  
 
         
