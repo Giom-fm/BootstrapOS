@@ -1,0 +1,4 @@
+- name: Copy omf config
+  ansible.builtin.copy:
+    src: ~/Dokumente/config/dotfiles/.bashrc
+    dest: ~/

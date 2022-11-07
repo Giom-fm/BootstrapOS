@@ -1,4 +1,0 @@
-- name: Copy omf config
-  ansible.builtin.copy:
-    src: ~/Dokumente/config/dotfiles/omf/init.fish
-    dest: ~/.config/omf/
