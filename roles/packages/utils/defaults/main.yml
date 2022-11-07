@@ -17,6 +17,5 @@ utils_packages:
   - apt-file
   - apt-listbugs
   - ranger
-  - fish
   - tmux
 

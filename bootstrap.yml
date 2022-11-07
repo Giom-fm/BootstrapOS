@@ -30,8 +30,7 @@
   gather_facts: false
   tags: [never, dotfiles]
   roles:
-  #  - shell
-    - dotfiles/omf
+    - shell
     - dotfiles/ranger
  
 
