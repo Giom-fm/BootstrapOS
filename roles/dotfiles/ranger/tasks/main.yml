@@ -1,4 +1,4 @@
 - name: Copy ranger rifle config
   ansible.builtin.copy:
     src: ~/Dokumente/config/dotfiles/ranger/rifle-xdg-open.conf
-    dest: ~/.config/ranger/
+    dest: ~/.config/ranger/rifle.conf
