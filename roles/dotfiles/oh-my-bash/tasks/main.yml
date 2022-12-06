@@ -1,0 +1,4 @@
+- name: Copy aliases
+  ansible.builtin.copy:
+    src: ~/Dokumente/config/dotfiles/oh-my-bash/aliases/
+    dest: ~/.oh-my-bash/custom/aliases/

@@ -1,4 +1,0 @@
-- name: Copy .bashrc
-  ansible.builtin.copy:
-    src: ~/Dokumente/config/dotfiles/.bashrc
-    dest: ~/

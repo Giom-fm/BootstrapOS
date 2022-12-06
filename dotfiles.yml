@@ -6,7 +6,7 @@
     - dotfiles/ranger
     - dotfiles/zellij
     - dotfiles/regolith2
-#    - dotfiles/bashrc
+    - dotfiles/oh-my-bash
 
       
       
