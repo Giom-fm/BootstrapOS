@@ -1,4 +1,11 @@
-- name: Copy regolith2 configs
-  ansible.builtin.copy:
-    src: ~/Dokumente/config/dotfiles/regolith2/
-    dest: ~/.config/regolith2
+- name: Link regolith2 i3 config.d
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/regolith2/i3/config.d"
+    dest: ~/.config/regolith2/i3/config.d
+    state: link
+
+- name: Link regolith2 Xresources
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/regolith2/Xresources"
+    dest: ~/.config/regolith2/Xresources
+    state: link

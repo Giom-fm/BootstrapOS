@@ -1,4 +1,11 @@
-- name: Copy aliases
-  ansible.builtin.copy:
-    src: ~/Dokumente/config/dotfiles/oh-my-bash/aliases/
-    dest: ~/.oh-my-bash/custom/aliases/
+- name: Link aliases
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/oh-my-bash/aliases/custom.aliases.sh"
+    dest: ~/.oh-my-bash/custom/aliases/custom.aliases.sh
+    state: link
+
+- name: Link bashrc
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/oh-my-bash/bashrc"
+    dest: ~/.bashrc
+    state: link

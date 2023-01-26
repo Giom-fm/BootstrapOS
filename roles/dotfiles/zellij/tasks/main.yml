@@ -1,4 +1,5 @@
-- name: Copy zellij configs
-  ansible.builtin.copy:
-    src: ~/Dokumente/config/dotfiles/zellij/
-    dest: ~/.config/zellij/
+- name: Link zellij configs
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/zellij"
+    dest: ~/.config/zellij
+    state: link
