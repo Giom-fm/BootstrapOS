@@ -1,14 +1,29 @@
 - block:
-  - name: remove custom folder
-    ansible.builtin.file:
-      state: absent
-      dest: ~/.config/oh-my-bash/custom
+  - name: Search for custom aliases
+    find:
+      paths: "{{ playbook_dir }}/dotfiles/oh-my-bash/custom/aliases"
+      file_type: file
+    register: find
 
-  - name: Link custom folder
+  - name: Link custom aliases
     ansible.builtin.file:
-      src: "{{ playbook_dir }}/dotfiles/oh-my-bash/custom"
-      dest: ~/.config/oh-my-bash/custom
+      src: "{{ item.path }}"
+      dest: "~/.config/oh-my-bash/custom/aliases/{{ item.path | basename }}"
       state: link
+    with_items: "{{ find.files }}"
+
+  - name: Search for custom plugins
+    find:
+      paths: "{{ playbook_dir }}/dotfiles/oh-my-bash/custom/plugins"
+      file_type: directory
+    register: find
+
+  - name: Link custom plugins
+    ansible.builtin.file:
+      src: "{{ item.path }}"
+      dest: "~/.config/oh-my-bash/custom/plugins/{{ item.path | basename }}"
+      state: link
+    with_items: "{{ find.files }}"
 
 - block:
   - name: remove bashrc
