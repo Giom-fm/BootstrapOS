@@ -10,7 +10,7 @@
     - packages/utils
     - packages/systemutils
     - packages/programming
-    - packages/virtualisation
+    - packages/virtualization
     - packages/office
     - packages/3dparty
     - packages/shell 

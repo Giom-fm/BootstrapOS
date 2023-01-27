@@ -1,4 +1,4 @@
-- name: Install browses
+- name: Install browsers
   become: true
   ansible.builtin.apt:
     pkg: "{{ browsers_packages }}"
