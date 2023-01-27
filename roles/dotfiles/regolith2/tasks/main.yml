@@ -1,7 +1,7 @@
 - name: Link regolith2 i3 config.d
   ansible.builtin.file:
-    src: "{{ playbook_dir }}/dotfiles/regolith2/i3/config.d"
-    dest: ~/.config/regolith2/i3/config.d
+    src: "{{ playbook_dir }}/dotfiles/regolith2/i3"
+    dest: ~/.config/regolith2/i3
     state: link
 
 - name: Link regolith2 Xresources
