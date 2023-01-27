@@ -4,13 +4,11 @@
   gather_facts: false
   tasks:
     - name: Create backup folder
-      tags: always
       ansible.builtin.file:
         path: "{{ playbook_dir }}/backup/"
         state: directory
 
     - name: Backup WLAN-keys
-      tags: [never, wlan]
       become: true
       ansible.posix.synchronize:
         src: /etc/NetworkManager/system-connections/
@@ -19,7 +17,6 @@
         delete: true
 
     - name: Backup SSH keys and config
-      tags: [never, ssh]
       ansible.posix.synchronize:
         src: ~/.ssh/
         dest: "{{ playbook_dir }}/backup/ssh/"
@@ -27,7 +24,6 @@
         delete: true
 
     - name: Backup repos
-      tags: [never, repos]
       become: true
       ansible.posix.synchronize:
         src: ~/repos/
@@ -37,19 +33,7 @@
         delete: true
         rsync_opts: ["--exclude=*{{ playbook_dir }}/backup*"]
 
-    - name: Backup bashrc
-      tags: [never, repos]
-      become: true
-      ansible.posix.synchronize:
-        src: ~/.bashrc
-        dest: "{{ playbook_dir }}/backup/"
-        archive: true
-        owner:
-        delete: true
-        rsync_opts: ["--exclude=*{{ playbook_dir }}/backup*"]
-
     - name: Compress backup into backup.tgz
-      tags: [never, archive]
       become: true
       community.general.archive:
         path: "{{ playbook_dir }}/backup/"
