@@ -1,5 +1,5 @@
 regolith_packages:
-  - regolith-destkop
+  - regolith-desktop
   - regolith-lightdm-config
   - i3xrocks-focused-window-name
   - i3xrocks-rofication

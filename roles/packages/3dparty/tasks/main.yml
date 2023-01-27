@@ -12,10 +12,10 @@
     state: present
   loop: "{{ third_party }}"
 
-- name: Install 3dparty packages
-  become: true
-  ansible.builtin.apt:
-    update_cache: yes
-    pkg: "{{ item.package }}"
-    state: present
-  loop: "{{ third_party }}"
+#- name: Install 3dparty packages
+#  become: true
+#  ansible.builtin.apt:
+#    update_cache: yes
+#    pkg: "{{ item.package }}"
+#    state: present
+#  loop: "{{ third_party }}"
