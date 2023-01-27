@@ -17,3 +17,13 @@
     upgrade: dist
     autoremove: yes
 
+- ansible.builtin.pause:
+    prompt: "Do you want to reboot your system now [y/n]"
+  register: reboot_response
+
+
+- name: Reboot system
+  ansible.builtin.reboot:
+  when: reboot_response == "y"
+
+
