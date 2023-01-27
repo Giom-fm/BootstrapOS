@@ -5,6 +5,7 @@
   roles:
     - sid
     - packages/3dparty
+    - packages/regolith
     - packages/upgrade
     - packages/office
     - packages/browsers
