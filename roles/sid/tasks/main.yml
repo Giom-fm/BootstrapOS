@@ -11,7 +11,7 @@
     dest: /etc/apt/sources.list.d/
 
 - ansible.builtin.pause:
-    prompt: "Do you want to upgrade your system now (yes/no)"
+    prompt: "Do you want to upgrade your system now (yes/NO)"
   register: confirm_upgrade
 
 - name: Upgrade system
@@ -23,7 +23,7 @@
   when: confirm_upgrade.user_input | bool
 
 - ansible.builtin.pause:
-    prompt: "Do you want to reboot your system now (yes/no)"
+    prompt: "Do you want to reboot your system now (yes/NO)"
   register: confirm_reboot
 
 - name: Reboot system
