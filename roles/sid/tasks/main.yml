@@ -10,19 +10,24 @@
     src: sid.list
     dest: /etc/apt/sources.list.d/
 
+- ansible.builtin.pause:
+    prompt: "Do you want to upgrade your system now (yes/no)"
+  register: confirm_upgrade
+
 - name: Upgrade system
   become: true
   ansible.builtin.apt:
     update_cache: yes
     upgrade: dist
     autoremove: yes
+  when: confirm_upgrade.user_input | bool
 
 - ansible.builtin.pause:
-    prompt: "Do you want to reboot your system now [y/n]"
-  register: reboot_response
+    prompt: "Do you want to reboot your system now (yes/no)"
+  register: confirm_reboot
 
 - name: Reboot system
   ansible.builtin.reboot:
-  when: reboot_response == "y"
+  when: confirm_reboot.user_input | bool
 
 
