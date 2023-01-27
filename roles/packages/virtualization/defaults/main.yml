@@ -1,4 +1,4 @@
-virtualisation_packages:
+virtualization_packages:
   - virt-manager
   - qemu-system-x86
   - ovmf
