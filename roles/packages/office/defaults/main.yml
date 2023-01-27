@@ -1,5 +1,7 @@
-virtualisation_packages:
-  - virt-manager
-  - qemu-system-x86
-  - ovmf
-  - bridge-utils
+office_packages:
+  - libreoffice-gtk3
+  - system-config-printer
+  - printer-driver-all
+  - hplip
+  - cups
+  - thunderbird
