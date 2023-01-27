@@ -4,6 +4,7 @@
   gather_facts: false
   roles:
     - sid
+    - packages/3dparty
     - packages/upgrade
     - packages/office
     - packages/browsers
@@ -12,7 +13,6 @@
     - packages/programming
     - packages/virtualization
     - packages/office
-    - packages/3dparty
     - packages/shell 
 
       
