@@ -1,6 +1,7 @@
 regolith_packages:
   - regolith-desktop
   - regolith-lightdm-config
+  - regolith-look-dracula
   - i3xrocks-focused-window-name
   - i3xrocks-rofication
   - i3xrocks-memory
