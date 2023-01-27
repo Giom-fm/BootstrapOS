@@ -1,8 +1,14 @@
-- name: Link aliases
-  ansible.builtin.file:
-    src: "{{ playbook_dir }}/dotfiles/oh-my-bash/aliases/custom.aliases.sh"
-    dest: ~/.oh-my-bash/custom/aliases/custom.aliases.sh
-    state: link
+- block:
+  - name: remove custom aliases folder
+    ansible.builtin.file:
+      state: absent
+      dest: ~/.oh-my-bash/custom/aliases
+
+  - name: Link aliases folder
+    ansible.builtin.file:
+      src: "{{ playbook_dir }}/dotfiles/oh-my-bash/aliases"
+      dest: ~/.oh-my-bash/custom/aliases
+      state: link
 
 - name: Link bashrc
   ansible.builtin.file:
