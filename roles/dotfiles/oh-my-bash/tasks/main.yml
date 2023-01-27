@@ -2,16 +2,22 @@
   - name: remove custom aliases folder
     ansible.builtin.file:
       state: absent
-      dest: ~/.oh-my-bash/custom/aliases
+      dest: ~/.config/oh-my-bash/custom/aliases
 
   - name: Link aliases folder
     ansible.builtin.file:
       src: "{{ playbook_dir }}/dotfiles/oh-my-bash/aliases"
-      dest: ~/.oh-my-bash/custom/aliases
+      dest: ~/.config/oh-my-bash/custom/aliases
       state: link
 
-- name: Link bashrc
-  ansible.builtin.file:
-    src: "{{ playbook_dir }}/dotfiles/oh-my-bash/bashrc"
-    dest: ~/.bashrc
-    state: link
+- block:
+  - name: remove bashrc
+    ansible.builtin.file:
+      state: absent
+      dest: ~/.bashrc
+
+  - name: Link bashrc
+    ansible.builtin.file:
+      src: "{{ playbook_dir }}/dotfiles/oh-my-bash/bashrc"
+      dest: ~/.bashrc
+      state: link
