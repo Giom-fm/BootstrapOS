@@ -2,6 +2,7 @@ utils_packages:
   - telegram-desktop
   - nextcloud-desktop
   - nextcloud-desktop-cmd
+  - element-desktop
   - keepassxc
   - vlc
   - filezilla

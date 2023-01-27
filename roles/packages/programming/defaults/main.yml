@@ -3,6 +3,7 @@ programming_packages:
   - git
   - nmap
   - wireshark
+  - code
   #- rustc
   #- cargo
   #- octave
