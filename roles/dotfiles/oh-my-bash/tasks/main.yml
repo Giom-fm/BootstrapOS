@@ -25,6 +25,19 @@
       state: link
     with_items: "{{ find.files }}"
 
+  - name: Search for custom themes
+    find:
+      paths: "{{ playbook_dir }}/dotfiles/oh-my-bash/custom/themes"
+      file_type: directory
+    register: find
+
+  - name: Link custom themes
+    ansible.builtin.file:
+      src: "{{ item.path }}"
+      dest: "~/.config/oh-my-bash/custom/themes/{{ item.path | basename }}"
+      state: link
+    with_items: "{{ find.files }}"
+
 - block:
   - name: remove bashrc
     ansible.builtin.file:
