@@ -20,4 +20,5 @@ utils_packages:
   - apt-listbugs
   - ranger
   - trash-cli
+  - docker.io
 
