@@ -6,14 +6,12 @@
     - sid
     - packages/3dparty
     - packages/regolith
-    - packages/upgrade
-    - packages/office
-    - packages/browsers
-    - packages/utils
     - packages/systemutils
+    - packages/utils
     - packages/programming
     - packages/virtualization
     - packages/office
+    - packages/browsers
     - packages/shell 
 
       
