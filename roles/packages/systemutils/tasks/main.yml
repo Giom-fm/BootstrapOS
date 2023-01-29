@@ -1,5 +1,0 @@
-- name: Install sytemutils packages
-  become: true
-  ansible.builtin.apt:
-    pkg: "{{ systemutils_packages }}"
-    state: present

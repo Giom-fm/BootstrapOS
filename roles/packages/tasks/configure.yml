@@ -1,0 +1,16 @@
+- name: Add keys
+  become: true
+  tags: repos
+  ansible.builtin.apt_key:
+    url: "{{ item.key }}"
+    keyring: /usr/share/keyrings/{{ item.package }}.gpg
+  loop: "{{ repos }}"
+
+- name: Add repositories
+  become: true            
+  tags: repos
+  ansible.builtin.apt_repository:
+    repo: "{{ item.repo }}"
+    filename: "{{ item.package }}"
+    state: present
+  loop: "{{ repos }}"

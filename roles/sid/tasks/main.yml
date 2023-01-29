@@ -1,21 +1,25 @@
 - name: Backup sources.list
   become: true
+  tags: sid
   ansible.builtin.command:
     cmd: mv /etc/apt/sources.list /etc/apt/sources.list.bak
     removes: /etc/apt/sources.list
 
 - name: Copy sid.list
   become: true
+  tags: sid
   ansible.builtin.copy:
     src: sid.list
     dest: /etc/apt/sources.list.d/
 
 - ansible.builtin.pause:
     prompt: "Do you want to upgrade your system now (yes/NO)"
+  tags: sid
   register: confirm_upgrade
 
 - name: Upgrade system
   become: true
+  tags: sid
   ansible.builtin.apt:
     update_cache: yes
     upgrade: dist
@@ -24,10 +28,10 @@
 
 - ansible.builtin.pause:
     prompt: "Do you want to reboot your system now (yes/NO)"
+  tags: sid
   register: confirm_reboot
 
 - name: Reboot system
+  tags: sid
   ansible.builtin.reboot:
   when: confirm_reboot.user_input | bool
-
-

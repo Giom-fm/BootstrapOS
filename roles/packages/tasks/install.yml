@@ -1,0 +1,70 @@
+- name: Install regolith packages
+  become: true
+  tags: regolith
+  ansible.builtin.apt:
+    pkg: "{{ regolith_packages }}"
+    state: present
+
+- name: Remove unused regolith packages
+  become: true
+  tags: regolith
+  ansible.builtin.apt:
+    pkg: "{{ regolith_packages_remove }}"
+    state: absent
+
+- name: Install sytemutils packages
+  become: true
+  tags: systemutils
+  ansible.builtin.apt:
+    pkg: "{{ systemutils_packages }}"
+    state: present
+
+- name: Install utils packages
+  become: true
+  tags: utils
+  ansible.builtin.apt:
+    pkg: "{{ utils_packages }}"
+    state: present
+
+- name: Install programming packages
+  become: true
+  tags: programming
+  ansible.builtin.apt:
+    pkg: "{{ programming_packages }}"
+    state: present
+
+- name: Install office packages
+  become: true
+  tags: office
+  ansible.builtin.apt:
+    pkg: "{{ office_packages }}"
+    state: present
+
+- name: Install browsers
+  become: true
+  tags: browsers
+  ansible.builtin.apt:
+    pkg: "{{ browsers_packages }}"
+    state: present
+
+- name: Install virtualization packages
+  become: true
+  tags: virtualization
+  ansible.builtin.apt:
+    pkg: "{{ virtualization_packages }}"
+    state: present
+
+- name: Install latex packages
+  become: true
+  tags: latex
+  ansible.builtin.apt:
+    pkg: "{{ latex_packages }}"
+    state: present
+
+- name: Install oh-my-bash
+  tags: shell
+  ansible.builtin.shell:
+    cmd: OSH="$HOME/.config/oh-my-bash" bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
+
+
+

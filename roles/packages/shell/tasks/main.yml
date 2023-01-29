@@ -1,5 +1,0 @@
-- name: Install oh-my-bash
-  ansible.builtin.shell:
-    cmd: OSH="$HOME/.config/oh-my-bash" bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
-
-

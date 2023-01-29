@@ -1,5 +1,0 @@
-- name: Install office packages
-  become: true
-  ansible.builtin.apt:
-    pkg: "{{ office_packages }}"
-    state: present

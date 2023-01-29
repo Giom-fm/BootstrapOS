@@ -1,5 +1,0 @@
-- name: Install utils packages
-  become: true
-  ansible.builtin.apt:
-    pkg: "{{ utils_packages }}"
-    state: present

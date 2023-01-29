@@ -1,19 +1,10 @@
-- name: Install packages
+- name: Configure and install packages
   hosts: localhost
   connection: local
   gather_facts: false
   roles:
     - sid
-    - packages/3dparty
-    - packages/regolith
-    - packages/systemutils
-    - packages/utils
-    - packages/programming
-    - packages/virtualization
-    - packages/office
-    - packages/browsers
-    - packages/shell 
-
+    - packages
       
 
 

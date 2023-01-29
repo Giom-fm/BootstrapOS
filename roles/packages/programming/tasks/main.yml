@@ -1,5 +1,0 @@
-- name: Install programming packages
-  become: true
-  ansible.builtin.apt:
-    pkg: "{{ programming_packages }}"
-    state: present

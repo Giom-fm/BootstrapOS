@@ -1,7 +1,0 @@
-office_packages:
-  - libreoffice-gtk3
-  - system-config-printer
-  - printer-driver-all
-  - hplip
-  - cups
-  - thunderbird
