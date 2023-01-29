@@ -6,6 +6,7 @@ regolith_packages:
   - i3xrocks-rofication
   - i3xrocks-memory
   - i3xrocks-battery
+  - i3xrocks-temp
 
 
 regolith_packages_remove:
