@@ -21,4 +21,5 @@ utils_packages:
   - ranger
   - trash-cli
   - docker.io
+  - spotify-client
 

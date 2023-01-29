@@ -6,9 +6,10 @@
   loop: "{{ third_party }}"
 
 - name: Add 3dparty repositories
-  become: true
+  become: true            
   ansible.builtin.apt_repository:
     repo: "{{ item.repo }}"
+    filename: "{{ item.package }}"
     state: present
   loop: "{{ third_party }}"
 
