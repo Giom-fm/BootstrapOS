@@ -5,6 +5,7 @@
   roles:
     - dotfiles/ranger
     - dotfiles/zellij
+    - dotfiles/kitty
     - dotfiles/regolith2
     - dotfiles/oh-my-bash
 
