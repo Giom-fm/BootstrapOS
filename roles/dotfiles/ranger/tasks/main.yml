@@ -1,5 +1,5 @@
-- name: link ranger rifle config
+- name: link ranger folder
   ansible.builtin.file:
-    src: "{{ playbook_dir }}/dotfiles/ranger/rifle-xdg-open.conf"
-    dest: ~/.config/ranger/rifle.conf
+    src: "{{ playbook_dir }}/dotfiles/ranger"
+    dest: ~/.config/ranger
     state: link

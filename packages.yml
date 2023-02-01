@@ -3,7 +3,7 @@
   connection: local
   gather_facts: false
   roles:
-    - sid
+    - { role: sid, tags: ['sid'] }
     - packages
       
 
