@@ -1,5 +1,7 @@
-- ansible.builtin.import_tasks:
-    file: configure.yml
+- tags: repo
+  ansible.builtin.import_tasks:
+        file: configure.yml
+
 
 - ansible.builtin.import_tasks:
-    file: install.yml
+        file: install.yml
