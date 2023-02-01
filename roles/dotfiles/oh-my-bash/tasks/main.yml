@@ -54,7 +54,7 @@
   - name: remove bash_profile
     ansible.builtin.file:
       state: absent
-      dest: ~/.bashrc
+      dest: ~/.bash_profile
 
   - name: Link bash_profile
     ansible.builtin.file:
