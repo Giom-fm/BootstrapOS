@@ -5,6 +5,13 @@
     pkg: "{{ regolith_packages }}"
     state: present
 
+- name: Install sway packages
+  become: true
+  tags: sway
+  ansible.builtin.apt:
+    pkg: "{{ sway_packages }}"
+    state: present
+
 - name: Remove unused regolith packages
   become: true
   tags: regolith
