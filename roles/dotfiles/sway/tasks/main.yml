@@ -1,0 +1,6 @@
+- name: Link sway config folder
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/sway"
+    dest: "~/.config/sway"
+    state: link
+

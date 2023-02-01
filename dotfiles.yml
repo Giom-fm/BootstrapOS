@@ -3,11 +3,13 @@
   connection: local
   gather_facts: false
   roles:
-    - dotfiles/ranger
-    - dotfiles/zellij
-    - dotfiles/kitty
-    - dotfiles/regolith2
-    - dotfiles/oh-my-bash
+    - { role: dotfiles/sway, tags: ['sway'] }
+    - { role: dotfiles/ranger, tags: ['ranger'] }
+    - { role: dotfiles/zellij, tags : ['zellij'] }
+    - { role: dotfiles/kitty, tags: ['kitty'] }
+    - { role: dotfiles/regolith2, tags: ['regolith'] }
+    - { role: dotfiles/oh-my-bash, tags: ['oh-my-bash'] }
+
 
       
       
