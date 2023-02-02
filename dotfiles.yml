@@ -3,8 +3,9 @@
   connection: local
   gather_facts: false
   roles:
-    - { role: dotfiles/sway, tags: ['sway'] }
+    - { role: dotfiles/sway, tags: ['never', 'sway'] }
     - { role: dotfiles/ranger, tags: ['ranger'] }
+    - { role: dotfiles/eww, tags: ['eww'] }
     - { role: dotfiles/zellij, tags : ['zellij'] }
     - { role: dotfiles/kitty, tags: ['kitty'] }
     - { role: dotfiles/regolith2, tags: ['regolith'] }

@@ -58,6 +58,7 @@ regolith_packages_remove:
   - regolith-i3-navigation
   - regolith-i3-unclutter
   - regolith-i3-workspace-config
+  - regolith-i3-session
   - i3xrocks-net-traffic
   - i3xrocks-focused-window-name
   - i3xrocks-rofication

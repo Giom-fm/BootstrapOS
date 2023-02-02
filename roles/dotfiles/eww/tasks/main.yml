@@ -1,0 +1,5 @@
+- name: Link eww 
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/eww"
+    dest: ~/.config/eww
+    state: link

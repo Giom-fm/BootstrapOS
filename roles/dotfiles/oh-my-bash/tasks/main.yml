@@ -49,15 +49,3 @@
       src: "{{ playbook_dir }}/dotfiles/oh-my-bash/bashrc"
       dest: ~/.bashrc
       state: link
-
-- block:
-  - name: remove bash_profile
-    ansible.builtin.file:
-      state: absent
-      dest: ~/.bash_profile
-
-  - name: Link bash_profile
-    ansible.builtin.file:
-      src: "{{ playbook_dir }}/dotfiles/oh-my-bash/bash_profile"
-      dest: ~/.bash_profile
-      state: link
