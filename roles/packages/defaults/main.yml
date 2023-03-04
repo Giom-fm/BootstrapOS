@@ -102,6 +102,7 @@ utils_packages:
   - trash-cli
   - docker.io
   - spotify-client
+  - bat
 
 virtualization_packages:
   - virt-manager
