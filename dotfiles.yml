@@ -7,7 +7,6 @@
     - { role: dotfiles/ranger, tags: ['ranger'] }
     - { role: dotfiles/eww, tags: ['eww'] }
     - { role: dotfiles/zellij, tags : ['zellij'] }
-    - { role: dotfiles/kitty, tags: ['kitty'] }
     - { role: dotfiles/regolith2, tags: ['regolith'] }
     - { role: dotfiles/oh-my-bash, tags: ['oh-my-bash'] }
 

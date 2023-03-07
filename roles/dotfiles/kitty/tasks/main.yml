@@ -1,5 +1,0 @@
-- name: Link kitty 
-  ansible.builtin.file:
-    src: "{{ playbook_dir }}/dotfiles/kitty"
-    dest: ~/.config/kitty
-    state: link
