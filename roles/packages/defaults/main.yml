@@ -76,7 +76,7 @@ systemutils_packages:
   - pulseaudio
   - pavucontrol
   - intel-media-va-driver-non-free
-  - kitty
+  - alacritty
 
 utils_packages:
   - telegram-desktop
