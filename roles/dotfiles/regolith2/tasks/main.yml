@@ -1,7 +1,7 @@
-- name: Link regolith2 i3 config.d
+- name: Link regolith2 sway folder
   ansible.builtin.file:
-    src: "{{ playbook_dir }}/dotfiles/regolith2/i3"
-    dest: ~/.config/regolith2/i3
+    src: "{{ playbook_dir }}/dotfiles/regolith2/sway"
+    dest: ~/.config/regolith2/sway
     state: link
 
 - name: Link regolith2 Xresources

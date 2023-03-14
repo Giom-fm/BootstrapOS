@@ -42,27 +42,30 @@ programming_packages:
 
 regolith_packages:
   - regolith-desktop
-  - regolith-lightdm-config
   - regolith-look-dracula
-  - i3xrocks-focused-window-name
-  - i3xrocks-rofication
-  - i3xrocks-memory
-  - i3xrocks-battery
-  - i3xrocks-temp
+#  - i3xrocks-focused-window-name
+#  - i3xrocks-rofication
+#  - i3xrocks-memory
+#  - i3xrocks-battery
+#  - i3xrocks-temp
 
 
 regolith_packages_remove:
-  - regolith-i3-ftue
-  - regolith-i3-base-launchers
-  - regolith-i3-compositor
-  - regolith-i3-navigation
-  - regolith-i3-unclutter
-  - regolith-i3-workspace-config
-  - regolith-i3-session
-  - regolith-i3-networkmanager
-  - i3xrocks-net-traffic
-  - i3xrocks-focused-window-name
-  - i3xrocks-rofication
+  - regolith-wm-workspace-config
+  - regolith-wm-base-launchers
+  - regolith-wm-resize
+  - regolith-wm-navigation
+#  - regolith-i3-ftue
+#  - regolith-i3-base-launchers
+#  - regolith-i3-compositor
+#  - regolith-i3-navigation
+#  - regolith-i3-unclutter
+#  - regolith-i3-workspace-config
+#  - regolith-i3-session
+#  - regolith-i3-networkmanager
+#  - i3xrocks-net-traffic
+#  - i3xrocks-focused-window-name
+#  - i3xrocks-rofication
 
 systemutils_packages:
   - firewalld
