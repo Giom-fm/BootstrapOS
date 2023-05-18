@@ -2,7 +2,7 @@ repos:
  - {package: regolith2-desktop, key: https://regolith-desktop.org/regolith.key, repo: "deb [signed-by=/usr/share/keyrings/regolith2-desktop.gpg arch=amd64] https://regolith-desktop.org/unstable-debian-testing-amd64 testing main"}
  - {package: code, key: https://packages.microsoft.com/keys/microsoft.asc, repo: "deb [signed-by=/usr/share/keyrings/code.gpg arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main"}
  - {package: google-chrome-stable, key: https://dl.google.com/linux/linux_signing_key.pub, repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-stable.gpg] http://dl.google.com/linux/chrome/deb/ stable main"}
- - {package: element-desktop, key: https://packages.riot.im/debian/element-io-archive-keyring.asc, repo: "deb [signed-by=/usr/share/keyrings/element-desktop.gpg] https://packages.riot.im/debian/ default main"}
+ - {package: element-desktop, key: https://packages.element.io/debian/element-io-archive-keyring.gpg, repo: "deb [signed-by=/usr/share/keyrings/element-desktop.gpg] https://packages.riot.im/debian/ default main"}
  - {package: spotify-client, key: https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg, repo: "deb [signed-by=/usr/share/keyrings/spotify-client.gpg] http://repository.spotify.com stable non-free"}
  
 # - {package: teams, key: https://packages.microsoft.com/keys/microsoft.asc, repo: "deb [signed-by=/usr/share/keyrings/teams.gpg arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main"}
