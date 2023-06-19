@@ -1,0 +1,11 @@
+- name: Link regolith sway folder
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/regolith3/sway"
+    dest: ~/.config/regolith3/sway
+    state: link
+
+- name: Link regolith Xresources
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/regolith3/Xresources"
+    dest: ~/.config/regolith3/Xresources
+    state: link
