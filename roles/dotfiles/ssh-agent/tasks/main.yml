@@ -1,0 +1,29 @@
+- name: Create environment.d
+  ansible.builtin.file:
+    path: ~/.config/environment.d/
+    state: directory
+    mode: '0755'
+
+- name: Create systemd/user/
+  ansible.builtin.file:
+    path: ~/.config/systemd/user/
+    state: directory
+    mode: '0755'
+
+- name: Link ssh-agent config file
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/ssh-agent/ssh_auth_socket.conf"
+    dest: ~/.config/environment.d/ssh_auth_socket.conf
+    state: link
+
+- name: Link ssh-agent service file
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/ssh-agent/ssh-agent.service"
+    dest: ~/.config/systemd/user/ssh-agent.service
+    state: link
+
+- name: Enable ssh-agent
+  ansible.builtin.systemd:
+    name: ssh-agent
+    enabled: true
+    scope: user
