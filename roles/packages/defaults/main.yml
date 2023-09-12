@@ -98,7 +98,6 @@ utils_packages:
   - flameshot
   - rsync
   - curl
-  - exa
   - apt-rdepends
   - apt-file
   - apt-listbugs
