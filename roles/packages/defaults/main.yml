@@ -80,6 +80,7 @@ systemutils_packages:
   - pavucontrol
   - intel-media-va-driver-non-free
   - alacritty
+  - nix-bin
 
 utils_packages:
   - telegram-desktop

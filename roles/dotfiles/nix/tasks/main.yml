@@ -1,0 +1,11 @@
+- name: Create home-manager config folder
+  ansible.builtin.file:
+    path: "~/.config/home-manager/"
+    state: directory
+
+- name: Link home-manager config
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/nix/home.nix"
+    dest: "~/.config/home-manager/home.nix"
+    state: link
+

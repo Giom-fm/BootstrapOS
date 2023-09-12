@@ -10,6 +10,8 @@
     - { role: dotfiles/regolith3, tags: ['regolith'] }
     - { role: dotfiles/oh-my-bash, tags: ['oh-my-bash'] }
     - { role: dotfiles/ssh-agent, tags: ['ssh-agent'] }
+    - { role: dotfiles/nix, tags: ['nix'] }
+
 
 
 
