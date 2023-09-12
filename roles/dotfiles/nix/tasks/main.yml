@@ -1,3 +1,15 @@
+- name: Create nixpkgs config folder
+  ansible.builtin.file:
+    path: "~/.config/nixpkgs/"
+    state: directory
+
+- name: Link nixplgs config
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/dotfiles/nix/config.nix"
+    dest: "~/.config/nixpkgs/config.nix"
+    state: link
+
+
 - name: Create home-manager config folder
   ansible.builtin.file:
     path: "~/.config/home-manager/"
